@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>The News Textiment</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Arvo&family=Fredericka+the+Great&family=UnifrakturCook:wght@700&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body >
+        <div class="mainheader" >
+            <div class="title">
+                <h1 style="color:blue;">The News  Textiment</h1>
+                <h2>Your new tool for evaluating the sentiment of articles & text</h2>
+            </div>
+ 
+                <div class="logo">
+                    Logo
+                </div>
+          
+ 
+           
+          <ul class="navbar">
+                <li ><a href="#">Home</a> </li>
+               <li> <a href="#">About</a></li>
+               <li> <a href="#">Support</a> </li> 
+            </ul>
+     
+        </div>
+
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="urlText" type="text" name="input" value=""  placeholder="Name">
+                    <p id="error" style="color:red;"></p>
+                       
+                    <input type="submit" id="submit" name="" value="analyze" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </section>
+
+            <section id='evaluation'>
+                <h1> <strong style="color:blue;">Evaluation</strong></h1> 
+                <div id="results"></div>
+                <p id="agreement"></p>
+                <p id="subjectivity"></p>
+                <p id="irony"></p>
+                <p id="confidence"></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('service-worker.js');
+                });
+            }
+           </script>
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+.mainheader {
+    display: grid; 
+    grid-auto-rows: 1fr; 
+    background: lightgray;
+    color: yellow;
+    gap: 0px 0px; 
+  grid-template-areas: 
+    ". title title ."
+    ". . . ."
+    "logo . navbar navbar"
+  
+   
+}
+.title { grid-area: title;
+text-align: center;
+}
+
+.logo { grid-area: logo;}
+
+.navbar { grid-area: navbar;
+
+
+ 
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-content: center;
+
+margin-left: 70%;
+gap:10px;
+
+}
+
+
+ul {
+    list-style-type: none;
+    // margin: 0;
+    // padding: 0;
+}
